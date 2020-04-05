@@ -1,0 +1,53 @@
+body{
+    background-color: whitesmoke;
+    margin: 0;
+
+}
+header{
+    background-color: #004785;
+    padding: 0.5em;
+}
+main{
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+}
+footer{
+    background-color: #004785;
+    position: fixed;
+    height:50px;
+    bottom: 0;
+    right: 0;
+    left:0;
+    padding: 0.5em;
+}
+footer p{
+    color:white;
+    text-align: center;
+}
+.logo{
+    height:75px;
+    width:150px;
+}
+h1{
+    color: #004785;
+    font-family: Arial;
+}
+
+h1.headline{
+    text-align: center;
+}
+
+.course-description{
+    font-size: large;
+}
+
+.course-advantages li{
+    font-size: medium;
+    padding:10px;
+}
+
+.course-advantages li:hover{
+    font-weight: bolder;
+}
