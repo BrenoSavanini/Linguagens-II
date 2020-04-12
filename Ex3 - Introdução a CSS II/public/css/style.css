@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    background-color: whitesmoke;
+}
+header{
+    background-color: #004785;
+}
+#container{
+    min-height: 100%;
+}
+main{
+    overflow:auto;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2.5em;
+}
+
+footer{
+    background-color: #004785;
+    position: relative;
+    margin-top: -50px;
+    width: 100%;
+    height: 50px; 
+    clear:both;
+}
+footer p{
+    padding-top: 20px;
+    color:white;
+    text-align: center;
+}
+.logo{
+    height:75px;
+    width:150px;
+}
+h1{
+    color: #004785;
+    font-family: Arial;
+}
+
+h1.headline{
+    text-align: center;
+    margin-bottom:1em;
+}
+
+.course-description{
+    font-size: x-large;
+
+}
+.course-advantages{
+    border:solid rgb(39, 39, 39);
+
+}
+.course-advantages li{
+    list-style: none;
+    font-size: larger;
+    padding:10px;
+}
+
+.course-advantages li:hover{
+    font-weight: bolder;
+    background-color: lightgray;
+}
+
+@media (min-width: 800px){
+    .course-advantages, .course-description{
+        display: inline-block;
+        width:48%;
+    }
+}
