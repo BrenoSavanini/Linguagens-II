@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+import { Curso } from '../shared/models/curso.model';
 
 @Component({
   selector: 'app-lista-cursos',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-cursos.component.css']
 })
 export class ListaCursosComponent implements OnInit {
-
+  @Input() cursos: Array<Curso> = [];
   constructor() { }
 
   ngOnInit(): void {

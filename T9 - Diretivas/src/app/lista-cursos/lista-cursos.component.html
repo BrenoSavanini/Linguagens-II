@@ -9,11 +9,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="cursos">
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+        <tr *ngFor="let c of cursos; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{c.nome}}</td>
+          <td>{{c.descricao}}</td>
+          <td>Agora</td>
         </tr>
       </tbody>
     </table>

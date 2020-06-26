@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Curso } from 'src/app/shared/models/curso.model';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   public showProfessores = false;
   public showCursos = false;
+  public cursos: Array<Curso> = [];
+
+  title = 'Mauá';
+
   ngOnInit(){
     this.showCursos = true;
   }
@@ -20,5 +25,8 @@ export class AppComponent implements OnInit{
     this.showCursos = true;
     this.showProfessores = false;
   }
-  title = 'Mauá';
+  insertList(curso:Curso){
+    this.cursos = [curso, ...this.cursos];
+
+  }
 }

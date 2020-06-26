@@ -36,8 +36,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
-  <app-insert-cursos *ngIf="showCursos"></app-insert-cursos>
-  <app-lista-cursos *ngIf="showCursos"></app-lista-cursos>
+  <app-insert-cursos (insercaoCurso)="insertList($event)" *ngIf="showCursos"></app-insert-cursos>
+  <app-lista-cursos [cursos]="cursos" *ngIf="showCursos"></app-lista-cursos>
 
   <app-professores *ngIf="showProfessores"></app-professores>  
   
