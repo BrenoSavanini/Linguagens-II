@@ -1,0 +1,30 @@
+.navbar{
+    background-color: #004785;
+}
+
+.navbar-nav span{
+    text-decoration: none;
+    list-style: none;
+    color: white !important;
+    cursor: pointer;
+}
+
+.form-control-sm{
+    height: 22px;
+}
+
+.item-text{
+    color: slategray;
+}
+
+.item-name{
+    color: #1f1f1f;
+    font-size: larger;
+}
+
+h1{
+    color: #424c6e;
+    font-weight: bolder;
+    margin:0.5em;
+}
+

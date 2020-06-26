@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="app.component.css">
+  
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light p-2">
+    <a class="navbar-brand" (click)="openMenu()">
+      <img src="assets/img/logo_maua.png" style="height:45px;cursor: pointer;" alt="">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <span (click)="openProfessores()" class="nav-link" >Professores</span>
+        </li>
+      </ul>
+    </div>
+    <div class="row mr-0">
+      <div class="col-8">
+        <input class="form-control form-control-sm mb-2" type="text" placeholder="Email">
+        <input class="form-control form-control-sm" type="password" placeholder="Senha">
+      </div>
+      <div class="col-4 align-self-center">
+        <button type="submit" class="btn btn-light btn-sm btn-block">Login</button>
+      </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <app-insert-cursos *ngIf="showCursos"></app-insert-cursos>
+  <app-lista-cursos *ngIf="showCursos"></app-lista-cursos>
+
+  <app-professores *ngIf="showProfessores"></app-professores>  
+  
+</body>
+
+</html>
+<!-- JQuery src -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<!-- Bootstrap src -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
