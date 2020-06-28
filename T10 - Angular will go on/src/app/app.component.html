@@ -21,6 +21,11 @@
           <span (click)="openProfessores()" class="nav-link" >Professores</span>
         </li>
       </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <span (click)="openUsuarios()" class="nav-link" >Usuarios</span>
+        </li>
+      </ul>
     </div>
     <div class="row mr-0">
       <div class="col-8">
@@ -38,7 +43,7 @@
   </nav>
   <app-insert-cursos (insercaoCurso)="insertList($event)" *ngIf="showCursos"></app-insert-cursos>
   <app-lista-cursos [cursos]="cursos" *ngIf="showCursos"></app-lista-cursos>
-
+  <app-cadastro-usuarios [cursos]="cursos" *ngIf="showUsuarios"></app-cadastro-usuarios>
   <app-professores *ngIf="showProfessores"></app-professores>  
   
 </body>

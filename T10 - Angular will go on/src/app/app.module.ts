@@ -7,13 +7,15 @@ import { CursosComponent } from './insert-cursos/insert-cursos.component';
 import { ProfessoresComponent } from './professores/professores.component';
 import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
 import { FormsModule } from '@angular/forms';
+import { CadastroUsuariosComponent } from './cadastro-usuarios/cadastro-usuarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CursosComponent,
     ProfessoresComponent,
-    ListaCursosComponent
+    ListaCursosComponent,
+    CadastroUsuariosComponent
   ],
   imports: [
     BrowserModule,

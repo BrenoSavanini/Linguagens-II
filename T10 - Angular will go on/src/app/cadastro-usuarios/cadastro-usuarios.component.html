@@ -1,0 +1,45 @@
+<h1>Conheça Nossos Cursos</h1>
+
+<div class="d-flex" id="content">
+  <form (ngSubmit)="criarUsuario(usuarioForm)" #usuarioForm="ngForm">
+    <div class="ml-5">
+      <div class="row mb-2">
+          <div class="col-4">
+              <input  class="form-control" id="nomeUser" name="nomeUser" placeholder="Nome" ngModel>
+          </div>
+          <div class="col-3">
+              <input  class="form-control" id="idadeUser" name="idadeUser" placeholder="Idade" ngModel>     
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-7">
+            <span [ngStyle]="{'font-weight': styleFont}">Escolha o curso:</span>
+          <select type="select" class="form-control" id="cursoUser" name="cursoUser" ngModel>
+              <option *ngFor="let curso of cursos" value="{{curso.nome}}">{{curso.nome}}</option>
+          </select>
+          <button type="submit" class="btn btn-primary mt-2">Criar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="container mt-5" id="content">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Idade</th>
+          <th scope="col">Curso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let u of usuarios; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td [ngClass]="{'user-impar': i % 2 == 0}">{{u.nome}}</td>
+          <td [ngClass]="{'user-impar': i % 2 == 0}">{{u.idade}}</td>
+          <td [ngClass]="{'user-impar': i % 2 == 0}">{{u.curso}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
